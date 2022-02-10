@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversões</title>
+    <style>
+        body{
+            background-color: rgb(124, 124, 219);
+            color: white;
+            font: normal 16pt Arial;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversões</h1>
+
+    <img src="strings.jpg" alt="Strings" width="500px"> <br>
+
+    <script>
+        /*
+        'Number.parseInt' converte para número inteiro
+        'Number.parseFloat' converte para número real (Ex: 5.5)
+        'Number' exibe o resultado sem a necessidade de conversão
+
+        CONVERTER NÚMERO PARA STRING - n é substituído pela variável declarada
+        'String(n)' ou
+        'n.toString()'
+
+        FORMATANDO STRINGS
+        var s = 'JavaScript'
+
+        'Eu estou aprendendo s' //Não faz interpolação
+        'Eu estou aprendendo' = s //Usa concatenação
+        `Eu estou aprendendo ${s}` //Usa template string
+        */
+        3
+        var n1 = Number.parseInt(window.prompt('Digite o primeiro número: ')) //String
+        var n2 = Number.parseInt(window.prompt('Digite o segundo número: ')) //String
+          var soma = n1 + n2
+        //String(soma)' ou 'soma.toString()
+         window.alert('A soma é: ' + soma) //Concatenação
+
+       //(number + number) para adição
+       //(string + string) para concatenação
+    </script>
+</body>
+</html>
