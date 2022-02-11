@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passoas com DOM</title>
+    <style>
+        body{
+            background-color: rgb(107, 107, 252);
+            color: white;
+            font: normal 12pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM - Modelos de Objeto para Documentos</h1>
+    <p>window é <strong>pai</strong> de document e html é filho de document</p>
+    <img src="arvore_dom.JPG" alt="Árvore DOM">
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div> <br>
+
+    <script>
+        //Utilizando a árvore window
+        window.document.write(window.document.charset) //Exibe código de caracteres
+        window.document.write(window.navigator.appName) //Exibe o navegador
+        window.document.write(window.document.URL) //Exibe a URL
+
+        /*SELECIONANDO ELEMENTOS DA ÁRVORE
+        por Marca - por ID - por Nome - por Classe - por Seletor
+        */
+
+        //SELECIONANDO ELEMENTO POR MARCA (getElementsByTagName)
+
+        // [0] é o primeiro parágrafo - [1] é o segundo parágrafo
+        var p1 = window.document.getElementsByTagName('p')[0]
+        //innerText é o texto que está dentro do parágrafo
+        window.document.write(p1.innerText)
+        //Concatenando
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        //Mudando a cor do texto
+        p1.style.color = 'black'
+        //Mudando a cor de fundo do corpo
+        var corpo = window.document.body
+        corpo.style.background = 'green'
+        //innerHTML trás o texto todo formatado dentro do parágrafo
+        //Ex: com a tag 'strong'
+         document.write(p1.innerHTML)
+        //Exibe alerta em uma pequena janela com botão OK
+        //innerHTML pega o texto com as tags filhas (formatações)
+        window.alert(p1.innerHTML)
+    </script>
+</body>
+</html>
