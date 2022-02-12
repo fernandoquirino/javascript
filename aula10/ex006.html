@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color:rgb(60, 196, 60);
+            color: white;
+            width: 200px;
+            font: normal 16pt Arial;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Div com 3 eventos-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+        //Se não estiver no plural, não é necessário usar colchetes
+        // var a é um escopo global, pois se estiver apenas dentro de uma função, servirá apenas para esta função
+        var a = window.document.getElementById('area')
+        function clicar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.background = 'rgb(60, 196, 60)'
+        }
+    </script>
+</body>
+</html>
